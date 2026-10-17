@@ -41,9 +41,12 @@ option is described in SuperTuxKart's
 
 ## In game
 
+The game is free, get it from [supertuxkart.net/Download](https://supertuxkart.net/Download).
+Any SuperTuxKart 1.x version works.
+
 To join: in `lan` mode, *Online, Enter server address*, then `IP:2759`. In `wan` mode, sign in
 to your STK Online account, then *Online, Global networking, Find server*; joining by address only
-works there if `STK_VALIDATE_PLAYERS` is `false`. Any SuperTuxKart 1.x client works.
+works there if `STK_VALIDATE_PLAYERS` is `false`.
 
 The first player to connect gets the crown. Only they can start the game, kick a player and
 change the game mode or difficulty. When they leave, the crown goes to the player who has been
