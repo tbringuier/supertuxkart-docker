@@ -9,7 +9,8 @@ services:
     environment:
       STK_SERVER_NAME: My server
       STK_MOTD: Welcome!
-      STK_MODE: wan
+      STK_MODE: lan
+      STK_VALIDATE_PLAYERS: "true"
       STK_GAME_MODE: 3
       STK_DIFFICULTY: 1
       STK_MAX_PLAYERS: 8

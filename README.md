@@ -24,7 +24,8 @@ Secrets go in `.env`, everything else in `compose.yaml`. Apply a change with `do
 |---|---|---|
 | `STK_SERVER_NAME` | SuperTuxKart Server | server name |
 | `STK_MOTD` | empty | message shown in the lobby |
-| `STK_MODE` | lan | `wan`: listed in the public server list, needs an STK Online account. `lan`: private, players enter `IP:2759` |
+| `STK_MODE` | lan | `lan`: private, players enter `IP:2759`. `wan`: listed in the public server list, players must be signed in to STK Online and join from that list |
+| `STK_VALIDATE_PLAYERS` | true | `wan` mode only. `false` also accepts players without an STK Online account and lets anyone join by `IP:2759` |
 | `STK_ONLINE_USERNAME`, `STK_ONLINE_PASSWORD` | empty | STK Online account used by the server in `wan` mode, in `.env` |
 | `STK_PASSWORD` | empty | password players must enter, in `.env` |
 | `STK_GAME_MODE` | 3 | starting mode: 3 race, 4 time trial, 6 soccer, 7 free for all, 8 capture the flag |
@@ -40,8 +41,9 @@ option is described in SuperTuxKart's
 
 ## In game
 
-To join: in `wan` mode, *Online, Global networking, Find server*; in `lan` mode,
-*Online, Enter server address*, then `IP:2759`. Any SuperTuxKart 1.x client works.
+To join: in `lan` mode, *Online, Enter server address*, then `IP:2759`. In `wan` mode, sign in
+to your STK Online account, then *Online, Global networking, Find server*; joining by address only
+works there if `STK_VALIDATE_PLAYERS` is `false`. Any SuperTuxKart 1.x client works.
 
 The first player to connect gets the crown. Only they can start the game, kick a player and
 change the game mode or difficulty. When they leave, the crown goes to the player who has been

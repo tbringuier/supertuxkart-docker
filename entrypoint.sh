@@ -33,6 +33,7 @@ fi
 
 if [ "${STK_MODE:-lan}" = "wan" ]; then
     set -- "--wan-server=${STK_SERVER_NAME:-SuperTuxKart Server}"
+    [ "${STK_VALIDATE_PLAYERS:-true}" = "true" ] || set -- "$@" --no-validation
 else
     set -- "--lan-server=${STK_SERVER_NAME:-SuperTuxKart Server}"
 fi
