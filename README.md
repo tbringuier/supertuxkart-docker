@@ -1,3 +1,5 @@
+<p align="center"><img src="logo.png" alt="SuperTuxKart" width="260"></p>
+
 # supertuxkart-docker
 
 A SuperTuxKart dedicated server in a small container, built from the official sources.
