@@ -1,0 +1,20 @@
+services:
+  supertuxkart:
+    image: ghcr.io/tbringuier/supertuxkart-docker:latest
+    container_name: supertuxkart
+    restart: unless-stopped
+    ports:
+      - "2759:2759/udp"
+    env_file: .env
+    environment:
+      STK_SERVER_NAME: My server
+      STK_MOTD: Welcome!
+      STK_MODE: wan
+      STK_GAME_MODE: 3
+      STK_DIFFICULTY: 1
+      STK_MAX_PLAYERS: 8
+      STK_OWNER_LESS: "false"
+    stdin_open: true
+    tty: true
+    # volumes:
+    #   - ./addons:/data/addons
